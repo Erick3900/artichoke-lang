@@ -1,0 +1,8 @@
+[requires]
+fmt/10.0.0
+gtest/1.13.0
+docopt.cpp/0.6.3
+tl-expected/20190710
+
+[generators]
+cmake_find_package_multi

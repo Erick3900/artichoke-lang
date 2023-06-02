@@ -1,0 +1,24 @@
+let calls = 0;
+
+const fibo_impl = fn(n) {
+    calls = calls + 1;
+
+    let tmp = null;
+    let last = 0;
+    let current = 1;
+
+    for (let i = 1; i < n; i = i + 1) {
+        tmp = last;
+        last = current;
+        current = last + tmp;
+    }
+
+    return current;
+};
+
+return {
+    fibo: fibo_impl, 
+    get_calls_count: fn(_) { 
+        return calls; 
+    }
+};
